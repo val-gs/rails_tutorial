@@ -983,3 +983,28 @@ Processing by MicropostsController#index as HTML
 Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/microposts/new" for 127.0.0.1 at 2019-01-13 20:15:45 +0900
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (1.7ms)
+  Rendered microposts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 28ms (Views: 19.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/microposts" for 127.0.0.1 at 2019-01-13 20:16:38 +0900
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yzKhuByIfHKNBRBaCAvYOfYM6mh8/bOmIFleIQ6cN3XTomkWJCmiiOeId5HrxUFR0fd2Ppkmt/xwME8mZrXMig==", "micropost"=>{"content"=>"今回は基本的な流れを簡単に説明しました。実際に使いはじめたときには、さらに詳しい仕組みやコマンドの知識が必要になってくるでしょう。その際には、自分で本やインターネットを調べながら使ってみてください。手を動かし、調べながら進めることによって、自然と身についていくでしょう。\r\n\r\nGit/GitHubはソースコードだけではなくシステムドキュメントや書籍原稿、デザイナーのテンプレートの管理などにも用いられます。実際の現場においても、そのチームに適したルールを考え、有効的にGit/GitHubを使い倒していきましょう。サーバサイドエンジニア。学生時代に研究室や学部の各種サーバ・ネットワーク構築などを経験し、プログラミング以外の技術も学ぶ。2011年に某Web系IT企業に入社。エンジニア職でありつつも、校正スキルには自信あり。現在はリーダーとしてマネジメントスキルを習得中。\r\n", "user_id"=>"3"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/microposts_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/microposts_controller.rb:30
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (2.3ms)
+  Rendered microposts/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 LIMIT 11[0m
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT  `microposts`.* FROM `microposts` WHERE `microposts`.`user_id` = 1 ORDER BY `microposts`.`id` ASC LIMIT 1[0m
