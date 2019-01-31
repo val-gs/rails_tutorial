@@ -25,6 +25,10 @@ group :development do
   gem 'spring-watcher-listen'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :test do
   gem 'rails-controller-testing'
   gem 'minitest'
