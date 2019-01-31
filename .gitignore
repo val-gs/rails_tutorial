@@ -24,3 +24,7 @@
 
 # Ignore Spring files.
 /spring/*.pid
+
+#Ignore vendor files.
+/vendor/bundle/
+/vendor/ruby/
