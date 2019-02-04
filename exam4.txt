@@ -1,0 +1,70 @@
+演習４−２
+1.
+def yeller(a)
+  array = a.map { |char| char.upcase}
+  array.join
+end
+
+2.
+def random_subdomain
+  ('a'..'z').to_a.shuffle[0..7].join
+end
+
+3.
+def string_shuffle(s)
+  s.split('').shuffle.join
+end
+
+演習４−３
+1.
+num = {one: 'uno', two: 'dos', three: 'tres'}
+num.each do |key, value|
+  puts "'#{key}' is '#{value}'"
+end
+
+2.
+person1 = {first: "Taro", last: "Tanaka"}
+person2 = {first: "Hanako", last: "Suzuki"}
+person3 = {first: "Subaru", last: "Murase"}
+params = {father: person1, mather: person2, child: person3}
+
+3.
+def make_password
+  ('a'..'z').to_a.shuffle[0..15].join
+end
+user = {name: "Subaru Murase",
+        email: "valblog.7321@gmail.com",
+        password_digest: make_password}
+
+演習4-4-1
+1.
+(1..10).class
+
+2.
+r = Range.new(1, 10)
+
+演習4-4-3
+1.
+class String
+  def palindrome?
+    self == self.reverse
+  end
+end
+irb(main):013:0> "racecar".palindrome?
+=> true
+irb(main):014:0> "onomatopoeia".palindrome?
+=> false
+
+2.
+str = "Malayalam"
+array = str.split('')
+a = array.map { |char| char.downcase }
+str = a.join
+str.palindrome?
+
+3.
+class String
+  def shuffle
+    split('').shuffle.join
+  end
+end
