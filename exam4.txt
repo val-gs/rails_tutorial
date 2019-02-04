@@ -35,3 +35,36 @@ end
 user = {name: "Subaru Murase",
         email: "valblog.7321@gmail.com",
         password_digest: make_password}
+
+演習4-4-1
+1.
+(1..10).class
+
+2.
+r = Range.new(1, 10)
+
+演習4-4-3
+1.
+class String
+  def palindrome?
+    self == self.reverse
+  end
+end
+irb(main):013:0> "racecar".palindrome?
+=> true
+irb(main):014:0> "onomatopoeia".palindrome?
+=> false
+
+2.
+str = "Malayalam"
+array = str.split('')
+a = array.map { |char| char.downcase }
+str = a.join
+str.palindrome?
+
+3.
+class String
+  def shuffle
+    split('').shuffle.join
+  end
+end
