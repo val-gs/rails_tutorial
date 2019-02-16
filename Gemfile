@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', require: false
 gem 'bootstrap-sass'
+gem 'bcrypt', '3.1.12'
 
 group :development, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
@@ -36,10 +37,6 @@ group :test do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
-end
-
-group :production do
-  gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
